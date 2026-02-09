@@ -54,7 +54,7 @@ console.log("Updated Products:", updatedProducts);
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// 1️⃣ Create array of products
+
 const product = [
   { id: 1, name: "Soap", price: 100 },
   { id: 2, name: "Tea", price: 400 },
@@ -63,7 +63,7 @@ const product = [
 ];
 
 
-// 2️⃣ Add GST (18%) using map (NO spread)
+
 const productWithGST = products.map(p => {
   return {
     id: p.id,
@@ -73,21 +73,21 @@ const productWithGST = products.map(p => {
 });
 
 
-// 3️⃣ Filter products between ₹300 and ₹700
+
 const filteredProduct = productsWithGST.filter(p => {
   return p.price >= 300 && p.price <= 700;
 });
 
 
-// 4️⃣ Calculate total & average price using reduce
+
 const total_Price = productsWithGST.reduce((sum, p) => {
   return sum + p.price;
 }, 0);
 
-const average_Price = totalPrice / productsWithGST.length;
+// const average_Price = totalPrice / productsWithGST.length;
 
 
-// 5️⃣ Update one product immutably (update price of id = 4)
+
 const updated_Products = products.map(p => {
   if (p.id === 4) {
     return {
@@ -108,5 +108,5 @@ const updated_Products = products.map(p => {
 console.log("Original:", products);
 console.log("With GST:", productsWithGST);
 console.log("Filtered:", filteredProducts);
-console.log("Average Price:", averagePrice);
+// console.log("Average Price:", averagePrice);
 console.log("Updated:", updatedProducts);
