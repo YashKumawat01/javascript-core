@@ -1,0 +1,22 @@
+body{
+    background-color: rgba(0, 0, 0, 0.641);
+}
+
+h2{
+    color: blue;
+    background-color: rgb(240, 255, 28);
+}
+
+h4{
+    color: brown;
+}
+
+p{
+    background-color: burlywood;
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}

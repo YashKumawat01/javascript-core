@@ -67,9 +67,11 @@ function getData(dataId, getNextdata){
         if(getNextdata){
             getNextdata()
         }
-    },3500)
+    },1500)
 }
 
 getData(1,()=>{
-    getData(2)
+    getData(2,()=>{
+        getData(3)
+    })
 })

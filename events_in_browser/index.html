@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+
+    <style>
+        .btn{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            text-align: center;
+            align-content: center;
+            border: 3px solid black;
+        }
+        .btn2 {
+    background-color: rgb(21, 255, 0);
+    border: 3px solid black;
+}
+
+.bg-green {
+    background-color: rgb(21, 255, 0);
+}
+
+    </style>
+  </head>
+  <body>
+    <button onclick="console.log('Button is Clicked')">Click Me</button>
+    <br />
+    <button ondblclick="console.log('Button is Clicked 2 times')">
+      Click Me Double
+    </button>
+    <br />
+    <div
+      onmouseover="console.log('Inside the Dive')"
+      class="box"
+      style="background-color: burlywood; width: 100px; height: 100px"
+    >
+      Box
+    </div>
+
+    <button class="btn">BG Changer</button>
+    <br>
+    <button class="btn2">BG Changer</button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
