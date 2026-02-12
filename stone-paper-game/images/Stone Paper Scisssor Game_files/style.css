@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 2rem;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  letter-spacing: 1px;
+}
+
+/* Choices Section */
+.choices {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.choice {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.choice img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+/* Hover effect */
+.choice:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Click effect */
+.choice:active {
+  transform: scale(0.95);
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.score {
+  font-size: 1.2rem;
+}
+
+.score p:first-child {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Message Container */
+.msg-container {
+  margin-bottom: 1.5rem;
+}
+
+#result {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+#computer-choice {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Reset Button */
+#reset-btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #1f4037;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#reset-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+#reset-btn:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .scoreboard {
+    gap: 2rem;
+  }
+
+  .choice {
+    width: 90px;
+    height: 90px;
+  }
+}
