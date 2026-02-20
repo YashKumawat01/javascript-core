@@ -1,5 +1,6 @@
 const startBtn = document.querySelector("#start");
 const stopBtn = document.querySelector("#stop");
+const textBTn = document.querySelector(".text")
 
 let intervalId = null;
 
@@ -26,3 +27,12 @@ stopBtn.addEventListener("click", function () {
     clearInterval(intervalId);
     intervalId = null;
 });
+
+
+textBTn.addEventListener("click", function () {
+    if (intervalId === null) {
+        intervalId = setInterval(function () {
+            document.body.style.backgroundColor = randomColor();
+        }, 1000);
+    }
+})
